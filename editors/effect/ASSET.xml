@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <windowclass name="effect_ASSET">
+        <script file="editors/effect/scripts/ASSET.lua" />
+		<margins control="0,0,0,2" />
+        <sheetdata>
+            <leftanchor_eb />
+
+            <subwindow_eb_asset />
+
+			<!-- <windowlist name="effect_tags">
+				<script>
+					function onInit()
+						update();
+					end
+					function update()
+						local bAddEmpty = true;
+
+						for _, win in pairs(getWindows()) do
+							if (win.getStringValue() or "") == "" then
+								bAddEmpty = false;
+							end
+						end
+
+						if bAddEmpty then
+							self.addEntry();
+						end
+					end
+					function addEntry()
+						createWindow();
+					end
+					function removeEntry(win)
+						win.close();
+						update();
+					end
+				</script>
+				<anchored>
+					<top offset="0" />
+					<left parent="leftanchor" anchor="right" relation="relative" offset="10" />
+					<right />
+				</anchored>
+				<class>subwindow_eb_filter</class>
+				<tags>
+					<tag></tag>
+				</tags>
+			</windowlist> -->
+            
+            <!-- <cycler_eb_range>
+                <anchored>
+                    <left offset="5" />
+                </anchored>
+            </cycler_eb_range>
+
+            <label_eb>
+                <static textres="opportunity_bonus"/>
+            </label_eb>
+            <checkbox_eb_valueholder name="effect_opportunity"/> -->
+        </sheetdata>
+    </windowclass>
+    <script name="loader_ASSET">
+        function onInit()
+            EditorManager.addEditor(
+                "category_stats",
+                {
+                    value="ASSET",
+                    labelres="effect_asset",
+                    windowclass="effect_ASSET"
+                }
+            )
+        end
+    </script>
+</root>

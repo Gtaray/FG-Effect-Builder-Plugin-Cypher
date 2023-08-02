@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <string name="filter_rolltype">Roll Type</string>
+	<string name="filter_stat">Stat tests</string>
+	<string name="filter_skill">Skill tests</string>
+	<string name="filter_defense">Defense tests</string>
+	<string name="filter_attack">Attack tests</string>
+	<string name="filter_initiative">Initiative tests</string>
+
+	<string name="filter_stattype">Stat Used</string>
+	<string name="filter_might">Might</string>
+	<string name="filter_speed">Speed</string>
+	<string name="filter_intellect">Intellect</string>
+</root>

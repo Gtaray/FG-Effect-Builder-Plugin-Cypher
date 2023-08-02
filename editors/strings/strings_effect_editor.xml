@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <string name="category_stats">Stats</string>
+	<string name="category_skills">Skills</string>
+	<string name="category_attacks">Attacks</string>
+	<string name="category_damage">Damage</string>
+	<string name="category_defenses">Defenses</string>
+	<string name="category_armor">Armor</string>
+	<string name="category_healing">Healing</string>
+	<string name="category_advantage">Advantage</string>
+	<string name="category_npc">Level</string>
+
+	<string name="effect_asset">Asset</string>
+</root>
