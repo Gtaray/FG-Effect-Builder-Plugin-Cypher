@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <windowclass name="conditional_WOUNDED">
+		<script file="editors/conditional/scripts/conditional_common.lua" />
+		<margins control="0,0,0,2" />
+		<effect>WOUNDED</effect>
+		<sheetdata>
+			<leftanchor_eb />
+
+			<combobox_eb_ifs />
+
+			<label_eb>
+                <static textres="conditional_invert"/>
+            </label_eb>
+            <checkbox_eb_valueholder name="effect_invert"/>
+		</sheetdata>
+	</windowclass>
+	<script name="loader_conditional_WOUNDED">
+        function onInit()
+            EditorManager.addEditor(
+                "category_conditional",
+                {
+                    value="conditional_WOUNDED",
+                    labelres="conditional_wounded",
+                    windowclass="conditional_WOUNDED"
+                }
+            );
+        end
+    </script>
+</root>

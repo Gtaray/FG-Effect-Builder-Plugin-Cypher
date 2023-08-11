@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
-    <windowclass name="effect_ASSET">
+    <windowclass name="effect_DISADV">
         <script file="editors/effect/scripts/effect_builder_common.lua" />
 		<margins control="0,0,0,2" />
-		<effect>ASSET</effect>
+		<effect>DISADV</effect>
         <sheetdata>
             <leftanchor_eb />
 
-            <subwindow_eb_asset />
 			<subwindow_eb_cb_stat_filter />
 			<subwindow_eb_cb_rolltype_filter />
 			<stringfield_eb_valueholder name="skill">
@@ -16,46 +15,46 @@
 			</stringfield_eb_valueholder>
         </sheetdata>
     </windowclass>
-    <script name="loader_ASSET">
+    <script name="loader_DISADV">
         function onInit()
             EditorManager.addEditor(
                 "category_stats",
                 {
-                    value="ASSET_stats",
-                    labelres="effect_asset",
-                    windowclass="effect_ASSET"
+                    value="DISADV_stats",
+                    labelres="effect_disadv",
+                    windowclass="effect_DISADV"
                 }
             );
 			EditorManager.addEditor(
                 "category_skills",
                 {
-                    value="ASSET_skills",
-                    labelres="effect_asset",
-                    windowclass="effect_ASSET"
+                    value="DISADV_skills",
+                    labelres="effect_disadv",
+                    windowclass="effect_DISADV"
                 }
             );
 			EditorManager.addEditor(
                 "category_attacks",
                 {
-                    value="ASSET_attacks",
-                    labelres="effect_asset",
-                    windowclass="effect_ASSET"
+                    value="DISADV_attacks",
+                    labelres="effect_disadv",
+                    windowclass="effect_DISADV"
                 }
             );
 			EditorManager.addEditor(
                 "category_defenses",
                 {
-                    value="ASSET_defenses",
-                    labelres="effect_asset",
-                    windowclass="effect_ASSET"
+                    value="DISADV_defenses",
+                    labelres="effect_disadv",
+                    windowclass="effect_DISADV"
                 }
             );
 			EditorManager.addEditor(
                 "category_initiative",
                 {
-                    value="ASSET_initiative",
-                    labelres="effect_asset",
-                    windowclass="effect_ASSET"
+                    value="DISADV_initiative",
+                    labelres="effect_disadv",
+                    windowclass="effect_DISADV"
                 }
             );
         end

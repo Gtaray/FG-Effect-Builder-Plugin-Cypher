@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <windowclass name="effect_INIT">
+        <script file="editors/effect/scripts/effect_builder_common.lua" />
+		<margins control="0,0,0,2" />
+		<effect>INIT</effect>
+        <sheetdata>
+            <leftanchor_eb />
+
+            <subwindow_eb_number_value />
+			<subwindow_eb_cb_stat_filter />
+        </sheetdata>
+    </windowclass>
+    <script name="loader_INIT">
+        function onInit()
+            EditorManager.addEditor(
+                "category_initiative",
+                {
+                    value="INIT",
+                    labelres="effect_init",
+                    windowclass="effect_INIT"
+                }
+            );
+        end
+    </script>
+</root>

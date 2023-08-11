@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
+
 <root>
     <string name="category_stats">Stats</string>
 	<string name="category_skills">Skills</string>
@@ -7,9 +8,56 @@
 	<string name="category_damage">Damage</string>
 	<string name="category_defenses">Defenses</string>
 	<string name="category_armor">Armor</string>
-	<string name="category_healing">Healing</string>
+	<string name="category_initiative">Initiative</string>
+	<string name="category_health">Health</string>
 	<string name="category_advantage">Advantage</string>
-	<string name="category_npc">Level</string>
+	<string name="category_npc">NPC</string>
+	<string name="category_cost">Stat Cost</string>
+	<string name="category_conditional">Conditional</string>
 
 	<string name="effect_asset">Asset</string>
+	<string name="effect_maxasset">Max Asset</string>
+	<string name="effect_edge">Edge</string>
+	<string name="effect_effort">Effort</string>
+	<string name="effect_maxeff">Max Effort</string>
+	<string name="effect_stat">Stat Modifier</string>
+	<string name="effect_skill">Skill Modifier</string>
+	<string name="effect_atk">Attack</string>
+	<string name="effect_def">Defense Modifier</string>
+	<string name="effect_dmg">Damage Modifier</string>
+	<string name="effect_heal">Heal Modifier</string>
+	<string name="effect_init">Initiative Modifier</string>
+	<string name="effect_recovery">Recovery Modifier</string>
+	<string name="effect_armor">Armor Modifier</string>
+	<string name="effect_ease">Ease</string>
+	<string name="effect_hinder">Hinder</string>
+	<string name="effect_cost">Cost Modifier</string>
+	<string name="effect_level">Level Modifier</string>
+	<string name="effect_pierce">Armor Piercing</string>
+	<string name="effect_immune">Damage Immunity</string>
+	<string name="effect_vuln">Damage Vulnerability</string>
+	<string name="effect_adv">Advantage</string>
+	<string name="effect_disadv">Disadvantage</string>
+	<string name="effect_grantadv">Grant Advantage</string>
+	<string name="effect_grantdisadv">Grant Disadvantage</string>
+	<string name="effect_shield">Shield</string>
+	<string name="effect_ignoreimpaired">Ignore Impaired Penalties</string>
+	<string name="effect_superarmor">Super Armor</string>
+	<string name="effect_train">Training</string>
+	<string name="effect_spec">Specialized</string>
+	<string name="effect_inability">Inability</string>
+	<string name="effect_regen">Regeneration</string>
+	<string name="effect_dmgo">Ongoing Damage</string>
+	<string name="effect_convertdefense">Convert Defense Roll</string>
+	<string name="effect_convertcost">Convert Cost Stat</string>
+
+	<string name="conditional_hale">Hale</string>
+	<string name="conditional_impaired">Impaired</string>
+	<string name="conditional_debilitated">Debilitated</string>
+	<string name="conditional_wounded">Wounded</string>
+	<string name="conditional_might">Might</string>
+	<string name="conditional_speed">Speed</string>
+	<string name="conditional_intellect">Intellect</string>
+	<string name="conditional_level">Level</string>
+	<string name="conditional_invert">Invert</string>
 </root>

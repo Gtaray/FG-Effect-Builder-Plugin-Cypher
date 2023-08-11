@@ -1,5 +1,104 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
-    
+	<template name="combobox_eb_damage_type">
+        <combobox_eb_valueholder name="damage_type">
+            <script>
+                function onInit()
+                    super.onInit()
+                    add("")
+					add("all")
+                    addItems(DamageTypeManager.get())
+                end
+            </script>
+            <empty textres="damage_type"/>
+        </combobox_eb_valueholder>
+    </template>
+
+	<template name="subwindow_eb_damage_types_combobox">
+        <combobox_eb_damage_type>
+            <anchored>
+                <size><width>90</width></size>
+                <left><offset>10</offset></left>
+            </anchored>
+            <script>
+                function onValueChanged()
+                    window.damageFieldUpdated(self)
+                    super.onValueChanged()
+                end
+            </script>
+        </combobox_eb_damage_type>
+    </template>
+
+	<template name="combobox_eb_ifs">
+		<combobox_eb name="conditional_value">
+			<anchored width="40" />
+			<script>
+				function onInit()
+					super.onInit()
+
+					add("IF", Interface.getString("if"));
+					add("IFT", Interface.getString("ift"));
+
+					if not hasValue() then
+						setListValue("IF");	
+					end
+				end
+				function onValueChanged()
+					window.parentcontrol.updateEffectString()
+				end
+			</script>
+			<unsorted />
+		</combobox_eb>
+	</template>
+
+	<template name="combobox_eb_operation">
+		<combobox_eb name="operation_value">
+			<anchored width="40" />
+			<script>
+				function onInit()
+					super.onInit()
+
+					add("=", Interface.getString("eq"));
+					add("&gt;", Interface.getString("gt"));
+					add("&lt;", Interface.getString("lt"));
+					add("&gt;=", Interface.getString("gte"));
+					add("&lt;=", Interface.getString("lte"));
+
+					if not hasValue() then
+						setListValue("=");	
+					end
+				end
+				function onValueChanged()
+					window.parentcontrol.updateEffectString()
+				end
+			</script>
+			<unsorted />
+		</combobox_eb>
+	</template>
+
+	<template name="combobox_eb_operand">
+		<combobox_eb name="operand_type">
+			<anchored width="60" />
+			<script>
+				function onInit()
+					super.onInit()
+
+					add("value", Interface.getString("value"));
+					add("max", Interface.getString("max"));
+
+					if not hasValue() then
+						setListValue("value");	
+					end
+				end
+				function onValueChanged()
+					window.parentcontrol.updateEffectString()
+					if window.number_value then
+						window.number_value.setVisible(getStringValue() == "value");
+					end
+				end
+			</script>
+			<unsorted />
+		</combobox_eb>
+	</template>
 </root>

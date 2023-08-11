@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <windowclass name="effect_SKILL">
+        <script file="editors/effect/scripts/effect_builder_common.lua" />
+		<margins control="0,0,0,2" />
+		<effect>SKILL</effect>
+        <sheetdata>
+            <leftanchor_eb />
+
+            <subwindow_eb_number_value />
+			<subwindow_eb_cb_stat_filter />
+			<stringfield_eb_valueholder name="skill">
+				<empty textres="filter_skill_name" />
+			</stringfield_eb_valueholder>
+        </sheetdata>
+    </windowclass>
+    <script name="loader_SKILL">
+        function onInit()
+			EditorManager.addEditor(
+                "category_skills",
+                {
+                    value="SKILL",
+                    labelres="effect_skill",
+                    windowclass="effect_SKILL"
+                }
+            );
+        end
+    </script>
+</root>

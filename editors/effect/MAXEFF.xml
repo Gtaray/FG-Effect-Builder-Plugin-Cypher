@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
-    <windowclass name="effect_ASSET">
+    <windowclass name="effect_MAXEFF">
         <script file="editors/effect/scripts/effect_builder_common.lua" />
 		<margins control="0,0,0,2" />
-		<effect>ASSET</effect>
+		<effect>MAXEFF</effect>
         <sheetdata>
             <leftanchor_eb />
 
-            <subwindow_eb_asset />
+            <subwindow_eb_number_value />
 			<subwindow_eb_cb_stat_filter />
 			<subwindow_eb_cb_rolltype_filter />
 			<stringfield_eb_valueholder name="skill">
@@ -16,46 +16,46 @@
 			</stringfield_eb_valueholder>
         </sheetdata>
     </windowclass>
-    <script name="loader_ASSET">
+    <script name="loader_MAXEFF">
         function onInit()
             EditorManager.addEditor(
                 "category_stats",
                 {
-                    value="ASSET_stats",
-                    labelres="effect_asset",
-                    windowclass="effect_ASSET"
+                    value="MAXEFF_stats",
+                    labelres="effect_maxeff",
+                    windowclass="effect_MAXEFF"
                 }
             );
 			EditorManager.addEditor(
                 "category_skills",
                 {
-                    value="ASSET_skills",
-                    labelres="effect_asset",
-                    windowclass="effect_ASSET"
+                    value="MAXEFF_skills",
+                    labelres="effect_maxeff",
+                    windowclass="effect_MAXEFF"
                 }
             );
 			EditorManager.addEditor(
                 "category_attacks",
                 {
-                    value="ASSET_attacks",
-                    labelres="effect_asset",
-                    windowclass="effect_ASSET"
+                    value="MAXEFF_attacks",
+                    labelres="effect_maxeff",
+                    windowclass="effect_MAXEFF"
                 }
             );
 			EditorManager.addEditor(
                 "category_defenses",
                 {
-                    value="ASSET_defenses",
-                    labelres="effect_asset",
-                    windowclass="effect_ASSET"
+                    value="MAXEFF_defenses",
+                    labelres="effect_maxeff",
+                    windowclass="effect_MAXEFF"
                 }
             );
 			EditorManager.addEditor(
                 "category_initiative",
                 {
-                    value="ASSET_initiative",
-                    labelres="effect_asset",
-                    windowclass="effect_ASSET"
+                    value="MAXEFF_initiative",
+                    labelres="effect_maxeff",
+                    windowclass="effect_MAXEFF"
                 }
             );
         end

@@ -1,61 +1,62 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
-    <windowclass name="effect_ASSET">
+    <windowclass name="effect_INABILITY">
         <script file="editors/effect/scripts/effect_builder_common.lua" />
 		<margins control="0,0,0,2" />
-		<effect>ASSET</effect>
+		<effect>INABILITY</effect>
         <sheetdata>
             <leftanchor_eb />
 
-            <subwindow_eb_asset />
 			<subwindow_eb_cb_stat_filter />
 			<subwindow_eb_cb_rolltype_filter />
+			<subwindow_eb_cb_attackrange_filter />
+			<subwindow_eb_cb_weapontype_filter />
 			<stringfield_eb_valueholder name="skill">
 				<empty textres="filter_skill_name" />
 			</stringfield_eb_valueholder>
         </sheetdata>
     </windowclass>
-    <script name="loader_ASSET">
+    <script name="loader_INABILITY">
         function onInit()
             EditorManager.addEditor(
                 "category_stats",
                 {
-                    value="ASSET_stats",
-                    labelres="effect_asset",
-                    windowclass="effect_ASSET"
+                    value="INABILITY_stats",
+                    labelres="effect_inability",
+                    windowclass="effect_INABILITY"
                 }
             );
 			EditorManager.addEditor(
                 "category_skills",
                 {
-                    value="ASSET_skills",
-                    labelres="effect_asset",
-                    windowclass="effect_ASSET"
+                    value="INABILITY_skills",
+                    labelres="effect_inability",
+                    windowclass="effect_INABILITY"
                 }
             );
 			EditorManager.addEditor(
                 "category_attacks",
                 {
-                    value="ASSET_attacks",
-                    labelres="effect_asset",
-                    windowclass="effect_ASSET"
+                    value="INABILITY_attacks",
+                    labelres="effect_inability",
+                    windowclass="effect_INABILITY"
                 }
             );
 			EditorManager.addEditor(
                 "category_defenses",
                 {
-                    value="ASSET_defenses",
-                    labelres="effect_asset",
-                    windowclass="effect_ASSET"
+                    value="INABILITY_defenses",
+                    labelres="effect_inability",
+                    windowclass="effect_INABILITY"
                 }
             );
 			EditorManager.addEditor(
                 "category_initiative",
                 {
-                    value="ASSET_initiative",
-                    labelres="effect_asset",
-                    windowclass="effect_ASSET"
+                    value="INABILITY_initiative",
+                    labelres="effect_inability",
+                    windowclass="effect_INABILITY"
                 }
             );
         end

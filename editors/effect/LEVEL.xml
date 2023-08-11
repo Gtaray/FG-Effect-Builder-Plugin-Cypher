@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <windowclass name="effect_LEVEL">
+        <script file="editors/effect/scripts/effect_builder_common.lua" />
+		<margins control="0,0,0,2" />
+		<effect>LEVEL</effect>
+        <sheetdata>
+            <leftanchor_eb />
+
+            <subwindow_eb_number_value />
+			<subwindow_eb_cb_stat_filter />
+			<subwindow_eb_cb_rolltype_filter />
+        </sheetdata>
+    </windowclass>
+    <script name="loader_LEVEL">
+        function onInit()
+            EditorManager.addEditor(
+                "category_npc",
+                {
+                    value="LEVEL",
+                    labelres="effect_level",
+                    windowclass="effect_LEVEL"
+                }
+            );
+        end
+    </script>
+</root>

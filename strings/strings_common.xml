@@ -7,9 +7,40 @@
 	<string name="filter_defense">Defense tests</string>
 	<string name="filter_attack">Attack tests</string>
 	<string name="filter_initiative">Initiative tests</string>
+	
+	<string name="filter_skill_name">Skill Name</string>
+	<string name="filter_damage_type">Damage Type</string>
+
+	<string name="filter_all">All</string>
+	<string name="filter_any">Any</string>
 
 	<string name="filter_stattype">Stat Used</string>
 	<string name="filter_might">Might</string>
 	<string name="filter_speed">Speed</string>
 	<string name="filter_intellect">Intellect</string>
+	<string name="filter_armor">Armor</string>
+
+	<string name="filter_attackrange">Attack Range</string>
+	<string name="filter_immediate">Immediate</string>
+	<string name="filter_short">Short</string>
+	<string name="filter_long">Long</string>
+	<string name="filter_verylong">Very Long</string>
+
+	<string name="filter_weapontype">Weapon Type</string>
+	<string name="filter_light">Light</string>
+	<string name="filter_medium">Medium</string>
+	<string name="filter_heavy">Heavy</string>
+
+	<string name="filter_convert_source">Source stat</string>
+	<string name="filter_convert_result">Result stat</string>
+
+	<string name="if">IF</string>
+	<string name="ift">IFT</string>
+	<string name="max">Max</string>
+	<string name="value">Value</string>
+	<string name="eq">=</string>
+	<string name="gt">&gt;</string>
+	<string name="lt">&lt;</string>
+	<string name="gte">&gt;=</string>
+	<string name="lte">&lt;=</string>
 </root>

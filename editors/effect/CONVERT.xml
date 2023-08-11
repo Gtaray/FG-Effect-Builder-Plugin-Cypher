@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <windowclass name="effect_CONVERTDEF">
+        <script file="editors/effect/scripts/effect_builder_convert.lua" />
+		<margins control="0,0,0,2" />
+		<effect>defense</effect>
+        <sheetdata>
+            <leftanchor_eb />
+
+			<subwindow_eb_cb_stat_filter name="source_stat">
+				<emptylabelres>filter_convert_source</emptylabelres>
+				<all />
+			</subwindow_eb_cb_stat_filter>
+			<subwindow_eb_cb_stat_filter name="result_stat">
+				<emptylabelres>filter_convert_result</emptylabelres>
+				<any />
+			</subwindow_eb_cb_stat_filter>
+        </sheetdata>
+    </windowclass>
+	<windowclass name="effect_CONVERTCOST">
+        <script file="editors/effect/scripts/effect_builder_convert.lua" />
+		<margins control="0,0,0,2" />
+		<effect>cost</effect>
+        <sheetdata>
+            <leftanchor_eb />
+
+			<subwindow_eb_cb_stat_filter name="source_stat">
+				<emptylabelres>filter_convert_source</emptylabelres>
+				<all />
+			</subwindow_eb_cb_stat_filter>
+			<subwindow_eb_cb_stat_filter name="result_stat">
+				<emptylabelres>filter_convert_result</emptylabelres>
+				<any />
+			</subwindow_eb_cb_stat_filter>
+        </sheetdata>
+    </windowclass>
+    <script name="loader_CONVERT">
+        function onInit()
+            EditorManager.addEditor(
+                "category_defenses",
+                {
+                    value="CONVERTDEF",
+                    labelres="effect_convertdefense",
+                    windowclass="effect_CONVERTDEF"
+                }
+            );
+			EditorManager.addEditor(
+                "category_cost",
+                {
+                    value="CONVERTDEF",
+                    labelres="effect_convertcost",
+                    windowclass="effect_CONVERTCOST"
+                }
+            );
+        end
+    </script>
+</root>

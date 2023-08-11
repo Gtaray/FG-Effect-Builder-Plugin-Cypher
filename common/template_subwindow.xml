@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
-	<windowclass name="subwindow_eb_filter">
+	<template name="subwindow_eb_damage_types">
+        <subwindow_eb_valueholder name="damage_types">
+            <class>subwindow_eb_damage_types</class>
+            <anchored>
+                <left offset="-5" />
+            </anchored>
+        </subwindow_eb_valueholder>
+    </template>
+	<windowclass name="subwindow_eb_damage_types">
+        <script file="common/scripts/subwindow_eb_damage_types.lua" />
+        <margins control="0,0,5,2" />
+        <sheetdata>
+            <leftanchor_eb />
+        </sheetdata>
+    </windowclass>
+
+	<template name="subwindow_eb_cb_weapontype_filter">
+        <subwindow_eb_valueholder name="weapontype_value">
+            <class>subwindow_eb_weapontype_value</class>
+        </subwindow_eb_valueholder>
+    </template>
+	<windowclass name="subwindow_eb_weapontype_value">
 		<script>
 			function getStringValue()
 				return effect_filter.getStringValue();
@@ -13,25 +34,156 @@
 
             <combobox_eb name="effect_filter">
 				<script>
-					local fOptionClicked;
 					function onInit()
 						super.onInit()
-						fOptionClicked = super.optionClicked;
-						super.optionClicked = optionClicked;
 
-						add("")
-					end
-					function optionClicked(wNewSelection)
-						fOptionClicked(wNewSelection);
-						
-						if getStringValue() == "" then
-							window.windowlist.removeEntry(window);
-						else
-							window.windowlist.update();
+						add("", Interface.getString("filter_weapontype"))
+						add("light", Interface.getString("filter_light"));
+						add("medium", Interface.getString("filter_medium"));
+						add("heavy", Interface.getString("filter_heavy"));
+
+						if not hasValue() then
+							setListValue("");
 						end
 					end
+					function onValueChanged()
+						window.parentcontrol.updateEffectString()
+					end
 				</script>
-				<empty textres="filter"/>
+				<unsorted />
+			</combobox_eb>
+        </sheetdata>
+    </windowclass>
+
+	<template name="subwindow_eb_cb_attackrange_filter">
+        <subwindow_eb_valueholder name="attackrange_value">
+            <class>subwindow_eb_attackrange_value</class>
+        </subwindow_eb_valueholder>
+    </template>
+	<windowclass name="subwindow_eb_attackrange_value">
+		<script>
+			function getStringValue()
+				return effect_filter.getStringValue();
+			end
+		</script>
+        <margins control="0,0,5,2" />
+        <sheetdata>
+            <leftanchor_eb />
+
+            <combobox_eb name="effect_filter">
+				<script>
+					function onInit()
+						super.onInit()
+
+						add("", Interface.getString("filter_attackrange"))
+						add("immediate", Interface.getString("filter_immediate"));
+						add("short", Interface.getString("filter_short"));
+						add("long", Interface.getString("filter_long"));
+						add("very long", Interface.getString("filter_verylong"));
+
+						if not hasValue() then
+							setListValue("");
+						end
+					end
+					function onValueChanged()
+						window.parentcontrol.updateEffectString()
+					end
+				</script>
+				<unsorted />
+			</combobox_eb>
+        </sheetdata>
+    </windowclass>
+
+	<template name="subwindow_eb_cb_rolltype_filter">
+        <subwindow_eb_valueholder name="rolltype_value">
+            <class>subwindow_eb_rolltype_value</class>
+        </subwindow_eb_valueholder>
+    </template>
+	<windowclass name="subwindow_eb_rolltype_value">
+		<script>
+			function getStringValue()
+				return effect_filter.getStringValue();
+			end
+		</script>
+        <margins control="0,0,5,2" />
+        <sheetdata>
+            <leftanchor_eb />
+
+            <combobox_eb name="effect_filter">
+				<script>
+					function onInit()
+						super.onInit()
+
+						add("", Interface.getString("filter_rolltype"))
+						add("stat", Interface.getString("filter_stat"));
+						add("skill", Interface.getString("filter_skill"));
+						add("def", Interface.getString("filter_defense"));
+						add("atk", Interface.getString("filter_attack"));
+						add("init", Interface.getString("filter_initiative"));
+
+						if not hasValue() then
+							setListValue("");
+						end
+					end
+					function onValueChanged()
+						window.parentcontrol.updateEffectString()
+					end
+				</script>
+				<unsorted />
+			</combobox_eb>
+        </sheetdata>
+    </windowclass>
+
+	<template name="subwindow_eb_cb_stat_filter">
+        <subwindow_eb_valueholder name="stat_value">
+            <class>subwindow_eb_stat_value</class>
+        </subwindow_eb_valueholder>
+    </template>
+	<windowclass name="subwindow_eb_stat_value">
+		<script>
+			function getStringValue()
+				return effect_filter.getStringValue();
+			end
+		</script>
+        <margins control="0,0,5,2" />
+        <sheetdata>
+            <leftanchor_eb />
+
+            <combobox_eb name="effect_filter">
+				<script>
+					function onInit()
+						super.onInit()
+
+						if window.parentcontrol.emptylabelres then
+							add("", Interface.getString(window.parentcontrol.emptylabelres[1]))
+						else
+							add("", Interface.getString("filter_stattype"))
+						end
+
+						if window.parentcontrol.any then
+							add("any", Interface.getString("filter_any"))
+						end
+						if window.parentcontrol.all then
+							add("all", Interface.getString("filter_all"))
+						end
+
+						add("might", Interface.getString("filter_might"));
+						add("speed", Interface.getString("filter_speed"));
+						add("intellect", Interface.getString("filter_intellect"));
+
+						if window.parentcontrol.addarmor then
+							add("armor", Interface.getString("filter_armor"));
+						end
+
+						if not hasValue() then
+							setListValue("");	
+						end
+					end
+					function onValueChanged()
+						window.parentcontrol.updateEffectString()
+					end
+				</script>
+				<unsorted />
 			</combobox_eb>
         </sheetdata>
     </windowclass>
@@ -42,7 +194,7 @@
         </subwindow_eb_valueholder>
     </template>
     <windowclass name="subwindow_eb_number_value">
-        <script file="common/scripts/subwindow_eb_dice_value.lua" />
+        <script file="common/scripts/subwindow_eb_number_value.lua" />
         <margins control="0,0,5,2" />
         <sheetdata>
             <leftanchor_eb />
@@ -57,7 +209,7 @@
         </subwindow_eb_valueholder>
     </template>
 	<windowclass name="subwindow_eb_asset">
-		<script file="common/scripts/subwindow_eb_dice_value.lua" />
+		<script file="common/scripts/subwindow_eb_number_value.lua" />
         <margins control="0,0,5,2" />
         <sheetdata>
             <leftanchor_eb />
@@ -68,56 +220,4 @@
 			</number_eb_valueholder>
         </sheetdata>
 	</windowclass>
-
-    <!-- <template name="subwindow_eb_damage_type">
-        <subwindow_eb_valueholder name="damage_type">
-            <anchored>
-                <size><width>135</width></size>
-            </anchored>
-            <class>subwindow_eb_damage_type</class>
-        </subwindow_eb_valueholder>
-    </template>
-    <windowclass name="subwindow_eb_damage_type">
-        <script file="common/scripts/subwindow_eb_damage_type.lua" />
-        <margins control="0,0,0,2" />
-        <sheetdata>
-            <leftanchor_eb />
-            <cycler_eb_not>
-                <anchored>
-                    <left offset="5" />
-                </anchored>
-            </cycler_eb_not>
-            <combobox_eb_damage_type>
-                <anchored>
-                    <size><width>90</width></size>
-                </anchored>
-                <script>
-                    function onInit()
-                        super.onInit()
-                        add("all")
-                    end
-                    function onValueChanged()
-                        window.damageFieldUpdated()
-                        super.onValueChanged()
-                    end
-                </script>
-            </combobox_eb_damage_type>
-        </sheetdata>
-    </windowclass>
-
-    <template name="subwindow_eb_damage_types">
-        <subwindow_eb_valueholder name="damage_types">
-            <class>subwindow_eb_damage_types</class>
-            <anchored>
-                <left offset="0" />
-            </anchored>
-        </subwindow_eb_valueholder>
-    </template>
-    <windowclass name="subwindow_eb_damage_types">
-        <script file="common/scripts/subwindow_eb_damage_types.lua" />
-        <margins control="0,0,5,2" />
-        <sheetdata>
-            <leftanchor_eb />
-        </sheetdata>
-    </windowclass> -->
 </root>

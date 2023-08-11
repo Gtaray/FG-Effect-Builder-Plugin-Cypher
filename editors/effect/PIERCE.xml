@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <windowclass name="effect_PIERCE">
+        <script file="editors/effect/scripts/effect_builder_common.lua" />
+		<margins control="0,0,0,2" />
+		<effect>PIERCE</effect>
+        <sheetdata>
+            <leftanchor_eb />
+
+            <subwindow_eb_number_value />
+			<subwindow_eb_damage_types />
+        </sheetdata>
+    </windowclass>
+    <script name="loader_LEVEL">
+        function onInit()
+            EditorManager.addEditor(
+                "category_damage",
+                {
+                    value="PIERCE",
+                    labelres="effect_pierce",
+                    windowclass="effect_PIERCE"
+                }
+            );
+        end
+    </script>
+</root>

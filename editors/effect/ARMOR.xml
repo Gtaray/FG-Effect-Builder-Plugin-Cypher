@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <windowclass name="effect_ARMOR">
+        <script file="editors/effect/scripts/effect_builder_common.lua" />
+		<margins control="0,0,0,2" />
+		<effect>ARMOR</effect>
+        <sheetdata>
+            <leftanchor_eb />
+
+            <subwindow_eb_number_value />
+			<subwindow_eb_cb_stat_filter />
+			<subwindow_eb_damage_types />
+        </sheetdata>
+    </windowclass>
+    <script name="loader_ARMOR">
+        function onInit()
+            EditorManager.addEditor(
+                "category_armor",
+                {
+                    value="ARMOR",
+                    labelres="effect_armor",
+                    windowclass="effect_ARMOR"
+                }
+            );
+        end
+    </script>
+</root>

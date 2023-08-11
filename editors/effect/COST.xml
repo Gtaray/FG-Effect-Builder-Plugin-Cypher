@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <windowclass name="effect_COST">
+        <script file="editors/effect/scripts/effect_builder_common.lua" />
+		<margins control="0,0,0,2" />
+		<effect>COST</effect>
+        <sheetdata>
+            <leftanchor_eb />
+
+            <subwindow_eb_number_value />
+			<subwindow_eb_cb_stat_filter>
+				<addarmor />
+			</subwindow_eb_cb_stat_filter>
+        </sheetdata>
+    </windowclass>
+    <script name="loader_COST">
+        function onInit()
+            EditorManager.addEditor(
+                "category_cost",
+                {
+                    value="COST",
+                    labelres="effect_cost",
+                    windowclass="effect_COST"
+                }
+            );
+        end
+    </script>
+</root>

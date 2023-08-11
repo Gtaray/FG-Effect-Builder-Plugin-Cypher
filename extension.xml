@@ -2,8 +2,8 @@
 <root version="3.3">
 	<properties>
 		<name>Feature: Effect Builder Plugin - Cypher</name>
-		<version>1.2.0</version>
-		<author>SoxMax</author>
+		<version>1.0.0</version>
+		<author>Saagael</author>
 		<description>Plugin for the Effect Builder providing effects for the Cypher System</description>
 		<loadorder>2</loadorder>
 		<ruleset>
@@ -12,7 +12,7 @@
 	</properties>
 	
 	<!-- TODO: REPLACE -->
-	<announcement text="https://forge.fantasygrounds.com/shop/items/463/view  \r Effect Builder Plugin - D&#38;D 5e / PFRPG Effects v1.2.0 \r Plugin for the Effect Builder providing D&#38;D 5e effects" font="emotefont" />
+	<announcement text="https://forge.fantasygrounds.com/shop/items/1308/view  \r Effect Builder Plugin - Cypher System Effects v1.0.0 \r Plugin for the Effect Builder providing Cypher System effects" font="emotefont" />
 	
 	<base>
 		<!-- Templates -->
@@ -26,32 +26,47 @@
 
 		<!-- Editors -->
 		<includefile source="editors/effect/ASSET.xml" />
-		<!-- <includefile source="editors/effect/ABILITY.xml" />
-		<includefile source="editors/effect/AC.xml" />
-		<includefile source="editors/effect/ADVATK.xml" />
-		<includefile source="editors/effect/ADVCHK.xml" />
-		<includefile source="editors/effect/ADVDEATH.xml" />
-		<includefile source="editors/effect/ADVINIT.xml" />
-		<includefile source="editors/effect/ADVSAV.xml" />
-		<includefile source="editors/effect/ADVSKILL.xml" />
-		<includefile source="editors/effect/ATK.xml" />
-		<includefile source="editors/effect/AVOIDANCE.xml" />
-		<includefile source="editors/effect/COVER.xml" />
-		<includefile source="editors/effect/DMG.xml" />
-		<includefile source="editors/effect/DMGO.xml" />
-		<includefile source="editors/effect/DMGTYPE.xml" />
-		<includefile source="editors/effect/DODGE.xml" />
-		<includefile source="editors/effect/EVASION.xml" />
-		<includefile source="editors/effect/EXHAUSTION.xml" />
-		<includefile source="editors/effect/HEAL.xml" />
-		<includefile source="editors/effect/IMMUNE.xml" />
-		<includefile source="editors/effect/INIT.xml" />
-		<includefile source="editors/effect/MAGIC_RESISTANCE.xml" />
-		<includefile source="editors/effect/REGEN.xml" />
-		<includefile source="editors/effect/REQUIRES_CONCENTRATION.xml" />
-		<includefile source="editors/effect/RESIST.xml" />
-		<includefile source="editors/effect/SAVE.xml" />
+		<includefile source="editors/effect/MAXASSET.xml" />
+		<includefile source="editors/effect/EDGE.xml" />
+		<includefile source="editors/effect/EFFORT.xml" />
+		<includefile source="editors/effect/MAXEFF.xml" />
+		<includefile source="editors/effect/STAT.xml" />
 		<includefile source="editors/effect/SKILL.xml" />
-		<includefile source="editors/effect/VULN.xml" /> -->
+		<includefile source="editors/effect/ATK.xml" />
+		<includefile source="editors/effect/DEF.xml" />
+		<includefile source="editors/effect/DMG.xml" />
+		<includefile source="editors/effect/HEAL.xml" />
+		<includefile source="editors/effect/INIT.xml" />
+		<includefile source="editors/effect/RECOVERY.xml" />
+		<includefile source="editors/effect/ARMOR.xml" />
+		<includefile source="editors/effect/EASE.xml" />
+		<includefile source="editors/effect/HINDER.xml" />
+		<includefile source="editors/effect/COST.xml" />
+		<includefile source="editors/effect/LEVEL.xml" />
+		<includefile source="editors/effect/PIERCE.xml" />
+		<includefile source="editors/effect/IMMUNE.xml" />
+		<includefile source="editors/effect/VULN.xml" />
+		<includefile source="editors/effect/ADV.xml" />
+		<includefile source="editors/effect/DISADV.xml" />
+		<includefile source="editors/effect/GRANTADV.xml" />
+		<includefile source="editors/effect/GRANTDISADV.xml" />
+		<includefile source="editors/effect/SHIELD.xml" />
+		<includefile source="editors/effect/IGNOREIMPAIRED.xml" />
+		<includefile source="editors/effect/SUPERARMOR.xml" />
+		<includefile source="editors/effect/TRAIN.xml" />
+		<includefile source="editors/effect/SPEC.xml" />
+		<includefile source="editors/effect/INABILITY.xml" />
+		<includefile source="editors/effect/CONVERT.xml" />
+		<includefile source="editors/effect/REGEN.xml" />
+		<includefile source="editors/effect/DMGO.xml" />
+
+		<includefile source="editors/conditional/HALE.xml" />
+		<includefile source="editors/conditional/IMPAIRED.xml" />
+		<includefile source="editors/conditional/DEBILITATED.xml" />
+		<includefile source="editors/conditional/WOUNDED.xml" />
+		<includefile source="editors/conditional/LEVEL.xml" />
+		<includefile source="editors/conditional/MIGHT.xml" />
+		<includefile source="editors/conditional/SPEED.xml" />
+		<includefile source="editors/conditional/INTELLECT.xml" />
 	</base>
 </root>

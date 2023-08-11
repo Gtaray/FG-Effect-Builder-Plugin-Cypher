@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <windowclass name="effect_ATK">
+        <script file="editors/effect/scripts/effect_builder_common.lua" />
+		<margins control="0,0,0,2" />
+		<effect>ATK</effect>
+        <sheetdata>
+            <leftanchor_eb />
+
+            <subwindow_eb_number_value />
+			<subwindow_eb_cb_stat_filter />
+        </sheetdata>
+    </windowclass>
+    <script name="loader_ATK">
+        function onInit()
+            EditorManager.addEditor(
+                "category_attacks",
+                {
+                    value="ATK",
+                    labelres="effect_atk",
+                    windowclass="effect_ATK"
+                }
+            );
+        end
+    </script>
+</root>

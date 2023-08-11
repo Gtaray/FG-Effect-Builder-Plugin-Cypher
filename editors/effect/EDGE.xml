@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <windowclass name="effect_EDGE">
+        <script file="editors/effect/scripts/effect_builder_common.lua" />
+		<margins control="0,0,0,2" />
+		<effect>EDGE</effect>
+        <sheetdata>
+            <leftanchor_eb />
+
+            <subwindow_eb_number_value />
+			<subwindow_eb_cb_stat_filter />
+			<subwindow_eb_cb_rolltype_filter />
+        </sheetdata>
+    </windowclass>
+    <script name="loader_EDGE">
+        function onInit()
+            EditorManager.addEditor(
+                "category_stats",
+                {
+                    value="EDGE_stats",
+                    labelres="effect_edge",
+                    windowclass="effect_EDGE"
+                }
+            );
+			EditorManager.addEditor(
+                "category_skills",
+                {
+                    value="EDGE_skills",
+                    labelres="effect_edge",
+                    windowclass="effect_EDGE"
+                }
+            );
+			EditorManager.addEditor(
+                "category_attacks",
+                {
+                    value="EDGE_attacks",
+                    labelres="effect_edge",
+                    windowclass="effect_EDGE"
+                }
+            );
+			EditorManager.addEditor(
+                "category_defenses",
+                {
+                    value="EDGE_defenses",
+                    labelres="effect_edge",
+                    windowclass="effect_EDGE"
+                }
+            );
+			EditorManager.addEditor(
+                "category_initiative",
+                {
+                    value="EDGE_initiative",
+                    labelres="effect_edge",
+                    windowclass="effect_EDGE"
+                }
+            );
+			EditorManager.addEditor(
+                "category_cost",
+                {
+                    value="EDGE_cost",
+                    labelres="effect_edge",
+                    windowclass="effect_EDGE"
+                }
+            );
+        end
+    </script>
+</root>

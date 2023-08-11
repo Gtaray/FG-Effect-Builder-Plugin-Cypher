@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <windowclass name="effect_IGNOREIMPAIRED">
+        <script file="editors/effect/scripts/effect_builder_common.lua" />
+		<margins control="0,0,0,2" />
+		<effect>IGNOREIMPAIRED</effect>
+        <sheetdata>
+            <leftanchor_eb />
+        </sheetdata>
+    </windowclass>
+    <script name="loader_IGNOREIMPAIRED">
+        function onInit()
+            EditorManager.addEditor(
+                "category_health",
+                {
+                    value="IGNOREIMPAIRED",
+                    labelres="effect_ignoreimpaired",
+                    windowclass="effect_IGNOREIMPAIRED"
+                }
+            );
+        end
+    </script>
+</root>
