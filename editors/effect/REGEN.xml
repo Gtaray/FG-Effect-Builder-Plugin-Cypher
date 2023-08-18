@@ -10,6 +10,22 @@
 
             <subwindow_eb_number_value />
 			<subwindow_eb_cb_stat_filter />
+
+			<label_eb>
+                <static textres="effect_overflow"/>
+				<tooltip textres="tooltip_overflow_healing" />
+            </label_eb>
+            <checkbox_eb_valueholder name="overflow">
+				<script>
+					function onInit()
+						if super and super.onInit then
+							super.onInit()
+						end
+						setValue(1);
+					end
+				</script>
+				<tooltip textres="tooltip_overflow_healing" />
+			</checkbox_eb_valueholder>
         </sheetdata>
     </windowclass>
     <script name="loader_REGEN">

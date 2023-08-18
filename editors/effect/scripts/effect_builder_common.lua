@@ -42,6 +42,14 @@ function createEffectString()
 		end
 	end
 
+	if overflow and overflow.getValue() == 0 then
+		table.insert(aFilters, "single");
+	end
+
+	if pierce and pierce.getValue() == 1 then
+		table.insert(aFilters, "pierce");
+	end
+
 	if not (effect and effect[1]) then
 		return "";
 	end

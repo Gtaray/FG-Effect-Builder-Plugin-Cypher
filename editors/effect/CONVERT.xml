@@ -48,7 +48,7 @@
 			EditorManager.addEditor(
                 "category_cost",
                 {
-                    value="CONVERTDEF",
+                    value="CONVERTCOST",
                     labelres="effect_convertcost",
                     windowclass="effect_CONVERTCOST"
                 }
