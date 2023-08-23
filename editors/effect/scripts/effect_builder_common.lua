@@ -42,6 +42,15 @@ function createEffectString()
 		end
 	end
 
+	Debug.chat(recovery_actions);
+	if recovery_actions then
+		local sActions = recovery_actions.getStringValue();
+		Debug.chat(sActions);
+		if (sActions or "") ~= "" then
+			table.insert(aFilters, sActions)
+		end
+	end
+
 	if overflow and overflow.getValue() == 0 then
 		table.insert(aFilters, "single");
 	end

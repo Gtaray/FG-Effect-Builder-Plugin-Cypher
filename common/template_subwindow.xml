@@ -10,8 +10,28 @@
         </subwindow_eb_valueholder>
     </template>
 	<windowclass name="subwindow_eb_damage_types">
-        <script file="common/scripts/subwindow_eb_damage_types.lua" />
+        <script file="common/scripts/subwindow_eb_combobox_list.lua" />
         <margins control="0,0,5,2" />
+		<control>subwindow_eb_damage_types_combobox</control>
+		<prefix>damage_type_</prefix>
+        <sheetdata>
+            <leftanchor_eb />
+        </sheetdata>
+    </windowclass>
+
+	<template name="subwindow_eb_recovery_actions">
+        <subwindow_eb_valueholder name="recovery_actions">
+            <class>subwindow_eb_recovery_actions</class>
+            <anchored>
+                <left offset="-5" />
+            </anchored>
+        </subwindow_eb_valueholder>
+    </template>
+	<windowclass name="subwindow_eb_recovery_actions">
+        <script file="common/scripts/subwindow_eb_combobox_list.lua" />
+        <margins control="0,0,5,2" />
+		<control>subwindow_eb_recover_actions_combobox</control>
+		<prefix>recovery_action_</prefix>
         <sheetdata>
             <leftanchor_eb />
         </sheetdata>

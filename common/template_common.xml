@@ -23,11 +23,44 @@
             </anchored>
             <script>
                 function onValueChanged()
-                    window.damageFieldUpdated(self)
+                    window.selectionUpdated(self)
                     super.onValueChanged()
                 end
             </script>
         </combobox_eb_damage_type>
+    </template>
+
+	<template name="combobox_eb_recoveryaction">
+		<combobox_eb_valueholder name="recovery_action">
+			<anchored width="60" />
+			<script>
+				function onInit()
+					super.onInit()
+
+					add("")
+					add("all");
+					add("action", Interface.getString("filter_recovery_action"));
+					add("minute", Interface.getString("filter_recovery_minute"));
+					add("hour", Interface.getString("filter_recovery_hour"));
+					add("day", Interface.getString("filter_recovery_day"));
+				end
+			</script>
+			<unsorted />
+		</combobox_eb_valueholder>
+	</template>
+	<template name="subwindow_eb_recover_actions_combobox">
+        <combobox_eb_recoveryaction>
+            <anchored>
+                <size><width>90</width></size>
+                <left><offset>10</offset></left>
+            </anchored>
+            <script>
+                function onValueChanged()
+                    window.selectionUpdated(self)
+					super.onValueChanged();
+                end
+            </script>
+        </combobox_eb_recoveryaction>
     </template>
 
 	<template name="combobox_eb_ifs">

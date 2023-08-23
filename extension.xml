@@ -59,6 +59,8 @@
 		<includefile source="editors/effect/CONVERT.xml" />
 		<includefile source="editors/effect/REGEN.xml" />
 		<includefile source="editors/effect/DMGO.xml" />
+		<includefile source="editors/effect/HALFRECOVERY.xml" />
+		<includefile source="editors/effect/NORECOVERY.xml" />
 
 		<includefile source="editors/conditional/HALE.xml" />
 		<includefile source="editors/conditional/IMPAIRED.xml" />

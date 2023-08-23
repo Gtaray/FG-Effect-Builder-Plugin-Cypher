@@ -4,7 +4,7 @@
     <windowclass name="effect_EASE">
         <script file="editors/effect/scripts/effect_builder_common.lua" />
 		<margins control="0,0,0,2" />
-		<effect>STAT</effect>
+		<effect>EASE</effect>
         <sheetdata>
             <leftanchor_eb />
 

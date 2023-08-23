@@ -52,6 +52,8 @@
 	<string name="effect_pierce">Ignore Armor</string>
 	<string name="effect_convertdefense">Convert Defense Roll</string>
 	<string name="effect_convertcost">Convert Cost Stat</string>
+	<string name="effect_halfrecovery">Half Recovery</string>
+	<string name="effect_norecovery">No Recovery</string>
 
 	<string name="conditional_hale">Hale</string>
 	<string name="conditional_impaired">Impaired</string>
@@ -66,4 +68,5 @@
 	<string name="tooltip_overflow_damage">If damage reduces the stat pool to 0, does the damage overflow to other stats?</string>
 	<string name="tooltip_overflow_healing">If healing increases the stat pool to its maximum, does the healing overflow to other stats?</string>
 	<string name="tooltip_pierce">Does this damage ignore armor?</string>
+	<string name="tooltip_single">Should this damage overflow into other stats</string>
 </root>

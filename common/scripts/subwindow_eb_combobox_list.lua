@@ -5,7 +5,7 @@ local fieldWidth = 100
 
 local function createField()
     index = index + 1
-    local newField = createControl("subwindow_eb_damage_types_combobox", "damage_type_" .. index)
+    local newField = createControl(control[1], prefix[1] .. index)
     fields[newField] = true
     return newField
 end
@@ -19,7 +19,7 @@ function onInit()
     fieldWidth = getFieldWidth(emptyField)
 end
 
-function damageFieldUpdated(updatedField)
+function selectionUpdated(updatedField)
 	-- If the control has the <single /> element, then don't add
 	if parentcontrol.single then
 		return;
@@ -50,5 +50,6 @@ function getStringValue()
             table.insert(fieldList, field.getValue())
         end
     end
-    return table.concat(fieldList, ",")
+	Debug.chat(fieldList);
+    return table.concat(fieldList, ", ")
 end

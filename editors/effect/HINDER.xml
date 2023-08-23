@@ -16,7 +16,7 @@
 			</stringfield_eb_valueholder>
         </sheetdata>
     </windowclass>
-    <script name="loader_EASE">
+    <script name="loader_HINDER">
         function onInit()
             EditorManager.addEditor(
                 "category_stats",

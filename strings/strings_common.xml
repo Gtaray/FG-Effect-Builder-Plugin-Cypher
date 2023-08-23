@@ -34,6 +34,11 @@
 	<string name="filter_convert_source">Source stat</string>
 	<string name="filter_convert_result">Result stat</string>
 
+	<string name="filter_recovery_action">action</string>
+	<string name="filter_recovery_minute">minute</string>
+	<string name="filter_recovery_hour">hour</string>
+	<string name="filter_recovery_day">day</string>
+
 	<string name="if">IF</string>
 	<string name="ift">IFT</string>
 	<string name="max">Max</string>

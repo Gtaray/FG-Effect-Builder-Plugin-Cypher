@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <windowclass name="effect_NORECOVERY">
+        <script file="editors/effect/scripts/effect_builder_common.lua" />
+		<margins control="0,0,0,2" />
+		<effect>NORECOVERY</effect>
+        <sheetdata>
+            <leftanchor_eb />
+
+			<subwindow_eb_recovery_actions />
+        </sheetdata>
+    </windowclass>
+    <script name="loader_NORECOVERY">
+        function onInit()
+            EditorManager.addEditor(
+                "category_health",
+                {
+                    value="NORECOVERY",
+                    labelres="effect_norecovery",
+                    windowclass="effect_NORECOVERY"
+                }
+            );
+        end
+    </script>
+</root>
