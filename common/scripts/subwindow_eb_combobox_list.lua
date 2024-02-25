@@ -50,6 +50,5 @@ function getStringValue()
             table.insert(fieldList, field.getValue())
         end
     end
-	Debug.chat(fieldList);
     return table.concat(fieldList, ", ")
 end

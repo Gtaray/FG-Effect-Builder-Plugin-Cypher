@@ -9,6 +9,12 @@
 		<ruleset>
 			<name>Cypher System</name>
 		</ruleset>
+		<ruleset>
+			<name>Numenera</name>
+		</ruleset>
+		<ruleset>
+			<name>The Strange</name>
+		</ruleset>
 	</properties>
 	
 	<!-- TODO: REPLACE -->
